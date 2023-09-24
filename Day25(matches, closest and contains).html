@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-25 study</title>
+</head>
+<body>
+    <div class="box" id="id1">This is an First Element <span id="sp1"> ancestor</span></div>
+    <div class="box" id="id2">This is an Second Element</div>
+</body>
+    <script>
+        let search_id=document.getElementById("id1");
+        console.log(search_id);
+        console.log(search_id.matches(".box"));//If the class name exist in the program then O/P=True otherwise False.
+
+        //element.Closest(css):
+        //console.log(sp1.closest("#sp1")) //Searching the ancestor of the closest element.
+
+        //Contains();
+        let sp1=document.getElementById("sp1");
+        console.log(sp1.contains(sp1));//Return True if elamA is inside in elamB otherwise false .
+        console.log(search_id.contains(sp1));
+        console.log(search_id.contains(id2)); 
+    </script>
+</html>

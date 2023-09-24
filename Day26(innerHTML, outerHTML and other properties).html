@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-26 Study materials</title>
+</head>
+<body>
+    <!-- Hidden attribute hide  the content -->
+    <span id="first" hidden>Hay, I Am Anupam</span>
+</body>
+
+    <script>
+        //Console.dir== show a object and access all properties;
+        console.dir(document.getElementsByTagName("span")[0]);
+
+         //console.log shows element DOM tree;
+        console.log(document.getElementsByTagName("span")[0]);
+
+        //using node name;
+        console.log(document.body.firstElementChild.nodeName); 
+        console.log(first.innerHTML);
+
+         //innerHTML Property get the HTML inside the element as a String
+        first.innerHTML="<b>Batman</b> In the city <i>Gotham</i>";
+
+        //The OuterHTML Contain the full HTML inner + the element itself
+        console.log(first.outerHTML);
+        console.log(first.outerHTML="<div>KnightWing Entered in Gotham City</div>");
+
+        //texContent to check all code and copy all things as a text 
+        console.log(document.body.textContent);
+        
+    </script>
+
+</html>

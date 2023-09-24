@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-27 Methods</title>
+</head>
+<body>
+    <div id="first" class="hey" data-game="Valorent" data-player="Anuska">
+        Hey Guys Welcome to my channel 
+    </div>
+    <div id="second" class="hey2" data-game="Gensenimpact" data-player="Anupam" >
+        Hey Community Welcome to my channel 
+    </div>
+</body>
+
+    <script>
+        //getAttribute() methods to check the attribute value
+        let ptr= first.getAttribute("class");
+        console.log(ptr);
+
+        //hasAttribute() to check the attribute is in or not, if in return true, otherwise false:
+        console.log(first.hasAttribute("class"));
+        console.log(first.hasAttribute("Style"));
+
+        //setAttribute(): to set the new attribute 
+        console.log(first.setAttribute("hidden","true"));
+
+        //removeAttribute() to remove the element
+        console.log(second.removeAttribute("class"));
+        console.log(first.removeAttribute("hidden"));
+
+        //attributes:
+        console.log(first.attributes)
+        //dataset
+        console.log(second.dataset);
+        console.log(second.dataset.game); //dataset names to call them
+        console.log(second.dataset.player);
+        console.log(first.dataset.game); 
+        console.log(first.dataset.player);
+    </script>
+</html>
