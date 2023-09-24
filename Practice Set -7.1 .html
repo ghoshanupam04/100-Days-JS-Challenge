@@ -1,0 +1,28 @@
+<!-- Create an Element with 3- children and now change the color of first and last element. 
+    and change all Li background to red -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task -3</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Call kar BSDK</li>
+        </ul>
+    </nav>
+</body>
+
+    <script>
+        let change_color=document.getElementsByTagName("ul")[0].firstElementChild.style.color="Blue";
+        change_color=document.getElementsByTagName("ul")[0].lastElementChild.style.color="red";
+        Array.from(document.getElementsByTagName("li")).forEach(element => {
+            element.style.background="cyan"
+        });
+    </script>
+</html>
