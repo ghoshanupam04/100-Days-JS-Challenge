@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 28 Study </title>
+</head>
+<body>
+    Outer the Container 
+    <div class="container">
+        Please start the container.
+        <div id="first">
+            I am the  First Element in Container class.
+        </div>
+        Please end the container
+    </div>
+    Outer the Container 
+</body>
+
+    <script>
+        let a=document.getElementsByTagName("div")[0];
+        a.innerHTML=a.innerHTML+"<h1>The Website is Hacked </h1>"
+        
+        //Create a New Element:
+        let b=document.getElementsByTagName('div')[0];
+        let div1=document.createElement("div");
+        div1.innerHTML='<h1>Continue Waiting for you...</h1>';
+        
+        b.appendChild(div1) //Append as a child. 
+        b.prepend(div1) //save as a Child of the Container and change the position.
+        a.before(div1) //at-first position print this and then container will second position.
+        b.after(div1); //Move down by the container.
+        b.replace(div1)
+
+    </script>
+</html>
