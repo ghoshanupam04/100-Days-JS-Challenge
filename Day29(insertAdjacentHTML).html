@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-29 Study</title>
+</head>
+<body>
+    <div id="first">
+        Hey There, I Am Anupam Ghosh.
+    </div>
+</body>
+
+    <script>
+        // beforeend(): a new Class Insert in th html before the first element
+        first.insertAdjacentHTML("beforeend",'<div class="Container"> This Is A Container Class BeforeEnd </div>');
+
+        //afterend(): a new class element is ready and that is in the end position 
+        first.insertAdjacentHTML("afterend",'<div class="Container1"> This Is A Container Class of AfterEnd </div>');
+
+        //beforebegin():  a new class element is read before the first tag which is in the body
+        first.insertAdjacentHTML("beforebegin",'<div class="Container2"> This Is A Container Class of BeforeBegin </div>');
+
+         //afterbegin(): 
+        first.insertAdjacentHTML("afterbegin",'<div class="Container3"> This Is A Container Class of afterBegin </div>');
+    
+        //Remove all things in the page 
+        first.remove()
+    </script>
+</html>
