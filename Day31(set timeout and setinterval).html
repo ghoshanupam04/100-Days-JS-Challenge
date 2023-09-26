@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout and set interval</title>
+</head>
+<body>
+    
+</body>
+
+    <script>
+        document.write("Please accept all Cookies")
+
+        //SetTimeout(): after the time limit the function execute in the code
+        setTimeout(function(){
+            confirm("This is the text");
+        },2000) //here 2000 means 2sec.
+        
+        //setTimeout() after the existing time the timer stop 
+        // create a function if inp 'y' then notification not show otherwise show.
+        let alr=setTimeout(function(){
+            alert("Please accept all Cookies")
+        },3000)
+        let permission=prompt("Permissions Accepts (y/n)");
+        if("n"==permission){
+            setTimeout(alr)
+        }
+        console.log(alr);
+        
+        // SetIbterval(): works as infinite while loop
+        setInterval(function(){
+            alert("Hello Charly");
+        },2000)
+            
+        //clearInterval(): stop the condition 
+    </script>
+</html>
