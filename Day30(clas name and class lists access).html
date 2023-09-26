@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 30 Study </title>
+</head>
+<style>
+    .yellow{
+        background-color: yellow;
+        color: rgb(225, 5, 5);
+    }
+    .red{
+        background-color: red;
+        color: white;
+    }
+    .txt_dark{
+        color: black;
+    }
+    .dark{
+        background-color: darkblue;
+        color: rgb(47, 223, 31);
+    }
+</style>
+<body>
+    <div id="first" class="yellow txt_dark">
+        <span>Hey, I am Good</span>
+    </div>
+    <div id="second" class="dark">
+        <span>Create a BatMan Costume for this halloween</span>
+    </div>
+
+    <script>
+        first.className="red txt_dark" //Access the classes using class name and change the classes
+        first.classList.remove('red'); //remove the class
+        first.classList.add("dark"); //add the new class
+        first.classList.toggle("dark") //if true then delete, if no then add.
+        first.classList.contains('red'); //if contain this then O/P true otherwise false
+    </script>
+</body>
+</html>
