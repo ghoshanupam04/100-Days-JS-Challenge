@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 32 study</title>
+</head>
+<body>
+    <div class="Container" onmouseenter="console.log('Please Click On it')" 
+    onclick="console.log('Container k ander click huya ')">
+        <button onclick="alert('Hello')">Click Me </button>
+    </div>
+</body>
+
+    <script>
+
+        //Browser Events is a signal that something has happened. All the DOM Nodes Generate such Signals.
+
+        //onmouseenter: When we enter the mouse curser on the given position then alert.
+        //onclick: when we click the position then alert.
+
+        let touch=document.getElementsByClassName("Container")[0]
+        touch.onmouseenter=(b)=>{
+            let conf=document.getElementsByClassName("Container")[0];
+            conf.innerHTML="Thank You For Touch Me";
+        }
+    </script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <div>
+        <button id="btn">Click Me</button>
+    </div>
+</body>
+    <script>
+
+    //addEventListener & removeEventListener
+
+        btn.addEventListener('click', function(){
+            alert("Hello World1")
+        })
+        btn.addEventListener('click', function(){
+            alert("Hello World2")
+        })
+
+        let x=function(){
+            alert("This Is Hello World-1");
+        }
+        let y=function(){
+            alert("This Is Hello World-2");
+        }
+        btn.addEventListener('click',x);
+        btn.addEventListener('click',y);
+        let ask=prompt("Enter Your Number: ");
+        if(ask==1){
+            btn.removeEventListener('click',y)
+        }
+
+        //.target: return the element which is we use.
+    </script>
+</html>
