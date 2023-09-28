@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function load_script(url,callback){   //callback function call the argument
+    var script=document.createElement('script');
+    script.src=url;
+    script.onload=function(){  //onload(when load the function)
+        console.log("loaded Script URL: "+url);
+        callback(null,url);
+    }
+    script.onerror=function(){  //Error Handling // onerror: whe a error 
+        console.log("Error Loading Script with URl: "+url)
+        callback(new error("URL got Some Error"))
+    }
+    document.body.appendChild(script)
+}
+function Morning(url){
+    console.log("Good Morning"+url)
+}
+function Hii(error, url){
+    if (error){
+        console.log(error)
+        return;
+    }
+    confirm("Hii Everyone:  "+url)
+}
+load_script("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js",Hii,Morning);
+
+    </script>
+</body>
+</html>
