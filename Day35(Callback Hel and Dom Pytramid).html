@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day35</title>
+</head>
+
+<body>
+    <h3>HelloWorld</h3>
+
+    <script>
+        //Pyramid Of Doom: Because it look like Pyramid.
+        function load_script(url, callback) {
+            var script = document.createElement("script");
+            script.src = url;
+            script.onload = function () {
+                console.log("The Url is: " + url);
+                callback(null, url);
+            }
+            script.onerror = function () {
+                console.log("The Error Url is: " + url);
+                callback(new Error("Url Got Some Error "));
+            }
+            document.body.appendChild(script)
+        }
+        function hello(error, url) {
+            alert("Hello Everyone " + url);
+        }
+        function Good_Afternoon(error, url) {
+            if (error) {
+                console.log("Error");
+                sendEmergencyMessageToCeo()
+                return;
+            }
+            alert("Good Afternoon Everyone " + url)
+        }
+        load_script("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", function Good_Afternoon(error, url) {
+            if (error) {
+                console.log("Error");
+                sendEmergencyMessageToCeo();
+                return;
+            }
+            load_script("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", function Good_Afternoon(error, url) {
+                if (error) {
+                    console.log("Error");
+                    sendEmergencyMessageToCeo();
+                    return;
+                }
+                load_script("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", function Good_Afternoon(error, url) {
+                    if (error) {
+                        console.log("Error");
+                        sendEmergencyMessageToCeo();
+                        return;
+                    }
+                    load_script("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", function Good_Afternoon(error, url) {
+                    if (error) {
+                        console.log("Error");
+                        sendEmergencyMessageToCeo();
+                        return;
+                    }
+                    load_script("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", function Good_Afternoon(error, url) {
+                    if (error) {
+                        console.log("Error");
+                        sendEmergencyMessageToCeo();
+                        return;
+                    }
+                })
+            })
+        })
+    })
+})
+
+    </script>
+</body>
+
+</html>
