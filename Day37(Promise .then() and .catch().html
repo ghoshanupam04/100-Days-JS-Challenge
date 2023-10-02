@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise function</title>
+</head>
+<body>
+    
+    <script>
+        console.log("The Start Part ")
+        let p=new Promise((resolve,reject)=>{
+            setTimeout(function(){
+                console.log("Thank You For Holding");
+                resolve("Your Code Is Resolved, Thank You!!");
+                // reject(new Error("Error In Your Program")) //Create a Error In The Program.
+            },4000)
+        })
+        console.log(p)
+
+        console.log("The Start Part ")
+        let p2=new Promise((resolve,reject)=>{
+            setTimeout(function(){
+                console.log("Thank You For Holding");
+                // resolve(true);
+                reject(new Error("Error!! ... In Your Program")) //Create a Error In The Program.
+            },4000)
+        })
+        //to get the value
+        p.then((value)=>{  //then() use when the program is solve.
+            alert(value);  
+        })
+        // //to catch the error
+        p2.catch((Error)=>{  //catch() use when a error in the code
+            alert("Sorry Some Error was Found In This Case.")
+        })
+
+        // using then() & catch():
+        p.then((value)=>{
+            alert(value);
+        },(error)=>{
+            alert("Some Error Was Found In Your Code");
+        })
+    </script>
+</body>
+</html>
