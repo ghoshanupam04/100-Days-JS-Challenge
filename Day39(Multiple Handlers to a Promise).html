@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-39 Work</title>
+</head>
+<body>
+    <center><h3> Hello World</h3></center>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Nemo non explicabo laboriosam enim eum necessitatibus, saepe aut nihil. 
+        Voluptate non reprehenderit ea laborum quisquam animi voluptatibus harum 
+        explicabo deleniti possimus. Est eaque consequatur, odit a adipisci vitae 
+        explicabo repellendus itaque quasi dolorum nam doloribus repellat?</div>
+
+    <script>
+        //Multiple Handlers:
+        /*Multiple Handlers Handle Promise Properly*/
+        //Example:
+        let p=new Promise((resolve,reject)=>{
+            alert("Sorry, Your Code Properly Not Working");
+            setTimeout(()=>{
+                resolve(40);
+            })
+        })
+        p.then((value)=>{
+            console.log("Congratulation, Your Code is properly Working right now");
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("The Code is Resolved Properly");
+                },2000)
+            })
+        }).then((value)=>{
+            console.log(value);
+        })
+        p.then((value)=>{
+            console.log("Done Properly");
+        })
+    </script>
+</body>
+</html>
