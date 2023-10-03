@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise API</title>
+</head>
+
+<body>
+    <center>
+        <h3>Hello World</h3>
+    </center>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Maxime, veniam illum dolor minus error, debitis recusandae
+        nemo praesentium explicabo velit odit dignissimos vitae modi hic
+        atque ducimus quia harum adipisci natus at. Cum eligendi architecto
+        tempore sit temporibus molestias beatae sequi cumque quam. Adipisci, quod.
+    </div>
+    <script>
+        //Promise API/ Methods:
+        //i.) Promise.all():
+        // let p=new Promise((resolve,reject)=>{
+        //     setTimeout(()=>{
+        //         resolve("Value -1");
+        //     },1000)
+        // })
+        // let p1=new Promise((resolve,reject)=>{
+        //     setTimeout(()=>{
+        //         resolve("Value -2");
+        //     },2000)
+        // })
+        // let p2=new Promise((resolve,reject)=>{
+        //     setTimeout(()=>{
+        //         resolve("Value -3");
+        //     },3000)
+        // })
+        // let promise_all=Promise.all([p,p1,p2]); //Promise.all return value in array from of the largest time limit.
+        // promise_all.then((value)=>{             //if any one failed in this code then full program is Error.
+        //     console.log(value);
+        // })
+
+        //ii.)promise.allSettled():
+        // let p = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value -1");
+        //     }, 1000)
+        // })
+        // let p1 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         reject(new Error("Error"));
+        //     }, 2000)
+        // })
+        // let p2 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value -3");
+        //     }, 3000)
+        // })
+        // let promise_allSettled = Promise.allSettled([p, p1, p2]) //If any one failed in the stage then other 2- are run. 
+        // promise_allSettled.then((value) => {             
+        //     console.log(value);
+        // })
+
+        //iii.)promise.race():
+        // let p = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value -1");
+        //     }, 5000)
+        // })
+        // let p1 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value -2");
+        //     }, 2000)
+        // })
+        // let p2 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("Value -3");
+        //     }, 3000)
+        // })
+        // let promise_race = Promise.race([p, p1, p2]) //at first execute the less-time program. 
+        // promise_race.then((value) => {             
+        //     console.log(value);
+        // })
+
+        //iv.)promise.any():
+        let p = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Value -1");
+            }, 5000)
+        })
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject(new Error("Error"));
+            }, 2000)
+        })
+        let p2 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Value -3");
+            }, 3000)
+        })
+        let promise_any = Promise.any([p, p1, p2]) //If any one filed in the stage then after the less-time program is executed. 
+        promise_any.then((value) => {             
+            console.log(value);
+        })
+
+        // v.)Promise.reject(): //reject throw error
+        let promise_reject=new Promise.reject(new Error("Error in this Program"))
+        promise_reject.then((value)=>{
+            console.log(val)
+        })
+        // v.)Promise.reject(): pass code properly 
+        let promise_resolve=new Promise.resolve("Run Code Properly")
+        promise_resolve.then((value)=>{
+            console.log(val)
+        })
+
+        
+
+    </script>
+</body>
+
+</html>
