@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error handle ad try catch</title>
+</head>
+
+<body>
+    <h3>
+        <center> Hello Coder's</center>
+    </h3>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+        sed voluptate! Repudiandae numquam eius vel et vero impedit minima
+        quis dolor, omnis id facilis expedita nihil eos fuga sed. Pariatur iusto labore voluptatem consectetur,
+        sit laborum magni velit voluptates quia temporibus aliquam in aut enim.
+
+        <script>
+            //Try-Catch:
+            setTimeout(() => {
+                console.log("Hello My Friend");
+            }, 2000);
+            setTimeout(() => {
+                console.log("Your Computer Was Hacked");
+            }, 3000);
+            setTimeout(() => {
+                console.log("Your password is - 14521qw78");
+            }, 4000);
+
+            //at first try to ignore the error and then when the error occurred then catch the error and program clearly run.
+            setTimeout(() => {
+                try {
+                    console.log(Mohan)
+                } //error in this stage and we handle the error 
+                catch (error) {
+                    console.log("Balle Balle You are hacked")
+                }
+            }, 5000)
+
+            setTimeout(() => {
+                console.log("Give Me $50");
+            }, 6000);
+            setTimeout(() => {
+                console.log("Thank You");
+            }, 7000);
+
+        </script>
+    </div>
+</body>
+
+</html>
