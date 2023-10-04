@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayanc Awat</title>
+</head>
+
+<body>
+    <h3>
+        <Center>Hello Coder's</Center>
+    </h3>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Nobis obcaecati repudiandae at, exercitationem voluptas,
+        porro maiores doloremque illo est, repellendus eligendi doloribus enim odio eveniet?
+        Nemo a, nostrum, officia, eveniet velit reprehenderit facere deserunt repudiandae quae
+        dicta laudantium quia culpa molestias exercitationem non tenetur unde!
+
+        <script>
+            //Async/await:
+            async function weather() {
+                let pune_weather = new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve("23' Rainy ")
+                    }, 3000)
+                })
+                let delhi_weather = new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve("28' Shiny ")
+                    }, 5000)
+                })
+                console.log("Fetching Pune Weather Report please wait...");
+                let puneW = await pune_weather;
+                console.log("Pune Weather: " + puneW);
+                console.log("Fetching Delhi Weather Report please wait...");
+                let delhiW = await delhi_weather;
+                console.log("Delhi Weather: " + delhiW);
+                return [puneW, delhiW]
+            }
+            console.log("Today's Weather update- ")
+            let weather_update = weather();
+            weather_update.then((value) => {
+                console.log(value);
+            })
+        </script>
+    </div>
+</body>
+
+</html>
