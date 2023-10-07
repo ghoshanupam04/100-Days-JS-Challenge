@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice -set -9</title>
+</head>
+
+<body>
+    <h3>All the tasks are done here.</h3>
+
+    <script>
+    
+//Task-1:
+        /*Create a Load_Script Program Using Promises:*/
+        let load_script=(url)=>{
+            return new Promise((resolve, reject)=>{
+                let script=document.createElement("Script");
+                script.src=url;
+                document.body.appendChild(script);
+                script.onload=()=>{
+                    resolve("The Program is successfully Loaded:- "+url)
+                }
+                script.onerror=()=>{
+                    reject("Error_404");
+                }
+            })
+        }
+        let p1=load_script("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js");
+        p1.then((value)=>{
+            console.log(value);
+        }).then((value)=>{
+            console.log("Congratulation!!...")
+        }).catch((value)=>{
+            console.log(value);
+        })
+        p1.catch((value)=>{
+            console.log("Sorry... One Error Found In This Program")
+        })
+
+//Task -2:
+        /*Create a Program and Handle Error after 3sec using Try,catch and promise:*/
+        let promise = () => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    reject(new Error("Error_404"));
+                }, 3000)
+            })
+        }
+        let a = async () => {
+            try {
+                let c = await promise();
+                console.log(c);
+            }
+            catch (error) {
+                console.log("Handle These Error Properly.")
+            }
+        }
+        a();
+
+
+    </script>
+</body>
+
+</html>
