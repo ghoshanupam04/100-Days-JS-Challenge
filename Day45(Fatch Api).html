@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+</head>
+<body>
+    <h3>Hello Coders</h3>
+
+    <script>
+        //Fetch API:
+        let p=fetch("https://goweather.herokuapp.com/weather/Ny"); //fetch API
+        p.then((value1)=>{
+            console.log(value1.status)
+            console.log(value1.ok)
+            return value1.json()
+        }).then((value2)=>{
+            console.log(value2)
+        })
+    </script>
+</body>
+</html>
