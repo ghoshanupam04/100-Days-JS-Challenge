@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accept Cookies</title>
+</head>
+<body>
+    
+    <script>
+        //Cookies:
+        /*cookies are small strings of data stored directly in hte browser*/
+        document.cookie // see all cookies in the browser 
+        console.log(document.cookie) //To check which Cookies are Present in this website
+        document.cookie="Batman_0-4-0-4_" //this is 1st new cookie which was added by older others
+        document.cookie="KnightWing_1-4-7-8_" //this is 2nd new cookie which was added by older others
+        console.log(document.cookie) //Now to check which Cookies are Present
+
+        //Encode URI Component
+        let key=prompt("Enter Your Key");
+        let value=prompt("Enter Your Key_Value");
+        document.cookie=`${key}${value}`//adding key using users choose, in this special Character does not use here.
+        //adding key using users choose with special character and Encode Characters
+        document.cookie=`${encodingURIcomponent(key)}=${encodingURIcomponent(value)}`
+        console.log(document.cookie)
+        decodeURIComponent("component") //decode the encodeURicomponent
+        
+        //Cookies Options:
+        document.cookie="user=btn, path=/a, Expire=10/12/2023"
+
+    </script>
+</body>
+</html>
