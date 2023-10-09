@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sending Post Request </title>
+</head>
+
+<body>
+    <h3>
+        <center> Sending Post Request </center>
+    </h3>
+
+    <script>
+        //Post request use to send data from the server.
+        let newMethod=async()=>{
+        let options = {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({
+                title: 'KnightWing',
+                body: 'BlackSut',
+                userId: 444,
+            }),
+        }
+        let p=await fetch('https://jsonplaceholder.typicode.com/posts', options)
+        let response=await p.json()
+        return response
+    }
+    const newFunc=async()=>{
+        let todo=await newMethod()
+        console.log(todo)
+    }
+    newFunc()
+    </script>
+</body>
+
+</html>
