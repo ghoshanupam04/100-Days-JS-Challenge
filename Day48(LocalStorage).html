@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discuss About LocalStorage</title>
+    <style>
+        h3{
+            color: red;
+            background-color: blueviolet;
+            display: inline;
+            text-decoration: line-through;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h3>About Local Storage</h3>
+    <script>
+        /*LocalStorage:
+        Local Storage is a wab-Storage Object which are not send to server with which Request*/ 
+        let value=prompt("Enter The Value")
+        let key=prompt("Enter The KEY")
+        localStorage.setItem(key,value) //set the items in localStorage
+        //Stored into Browser local-storage
+        console.log(`The Main City is ${value} and Secondary CIty is ${localStorage.getItem(key)}`);
+        localStorage.getItem //to know/get the value       
+        if(key=="red" || key=="Blue"){
+            localStorage.removeItem(key) //Remove item with these Condition
+        }
+        if(key==0){
+            localStorage.clear(key) //clear all items with these condition
+        }
+        localStorage.length //to know the length of the local storage
+        localStorage.key(1)//return the value of KEY 1.
+        localStorage.one=1 //add the item in localStorage #process2
+        JSON.stringify(Object) //JSON to Object Convert
+        JSON.parse(string) //JSON to String convert
+
+        
+    </script>
+</body>
+</html>
