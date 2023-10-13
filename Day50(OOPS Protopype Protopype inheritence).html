@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs</title>
+</head>
+<body>
+    <h3><center>OOPS</center></h3>
+
+    <script>
+        //Set a Object Prototype:
+        /*let info={
+            name:"Anupam Ghosh",
+            Language:"Java Script"
+        }
+        console.log(info)
+        let p={
+            run: ()=>{
+                confirm("Run")
+            }
+        }
+        info.__proto__=p; //Set Prototype
+        info.run();*/
+       
+
+        //Example -2:
+
+        let info={
+            name:"BatMan",
+            City:"Gotham City",
+            president:"Ben McKenzie",
+            detective:"James Gordon"
+        }
+        console.log(info)
+
+        let info2={
+            Justicleague:()=>{
+                alert("This City Is Safe Now");
+            }
+        }
+        info.__proto__=info2;
+        info.Justicleague();
+        info.__proto__={
+            name2:"KnightWing"
+        }
+        console.log(info.name2)
+
+    </script>
+</body>
+</html>
