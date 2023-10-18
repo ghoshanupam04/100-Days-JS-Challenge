@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter and Setter</title>
+</head>
+<body>
+    <h3>Hello Coders</h3>
+
+    <script>
+        class Animal{
+            constructor(name){
+                this._name=name
+            }
+            fly(){
+                console.log(this.name+ " are Flying")
+            }
+            get name(){  //getter Syntax  Get new Element 
+                return this._name
+            }
+            set name(newname){  //Set new Element
+                return this._name=newName
+            }
+        }
+        let f=new Animal("Birds");
+        f.fly()
+        console.log(f.name)
+        f.name="Jack";
+        console.log(f.name)
+
+        //instanceof operator allow check weather a object belong to a class.
+        console.log(f instanceof Animal) 
+    </script>
+</body>
+</html>
