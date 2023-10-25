@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring assignment and Spread Operator</title>
+</head>
+
+<body>
+    <h3>Hello Coders</h3>
+
+    <script>
+        //Destructuring assignment
+        let arr=[3,5,8,10,12,14];
+        let [a,b,c,...rest]=arr;
+        //console.log(a,b,c,rest); //after rest that are in array format printed
+        // console.log(b);
+
+        //when the values are changed the format (value start with 10):
+        let arr1=[3,5,8,10,12,14];
+        let [a1,b2,c3,...rest1]=arr1;
+        //console.log(a,rest);
+
+        //Spread Operator:
+        let arr2=[1,7,2];
+        let obj={...arr2};
+        console.log(obj) ////Output=> Object { 0: 1, 1: 7, 2: 2 } 
+        function sum(v1,v2,v3){
+            return (v1+v2+v3) ;
+        }
+        console.log("The Sum Of 3- Number is: "+sum(...arr2))
+
+        //Example:
+        let obj2={
+            Name:"Anupam Das",
+            Company:"Google",
+            Address:"Bengalore"
+        }
+        console.log({...obj2,Name:"Anupam Ghosh",Company:"Microsoft"}); //here values are Changed
+
+    </script>
+</body>
+
+</html>
