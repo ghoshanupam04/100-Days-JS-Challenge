@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+    <style>
+        h3{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h3>Hello Coders Todays Topics are Hoisting in Javascript</h3>
+    <script>
+        //Hoisting:
+        /* Hoisting reverse to the process where the interpreter appears to move the declaration to the top of the code
+        before execution. */
+        /*Javascript only host declaration not initialization.*/
+        /*Function and Class Expression are not hoisted*/
+
+        //Example:
+        console.log(a); //here a value is undefined
+        ax()
+        function ax(){ //Function can run properly
+            console.log("We Call The function before create the Function Structure")
+        }
+
+        var a=9; //declaration hoisted to the top but initialization is not.
+        console.log(a) //here a return value 9.
+    </script>
+</body>
+</html>
