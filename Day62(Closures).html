@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+    <style>
+        h3 {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Hello Coders Todays Topic is Closures</h3>
+
+    <script>
+        //Closures
+        /*A closure is the combination of a function bundled together (enclosed) with references to its 
+        surrounding state (the lexical environment).*/
+
+        //Example:
+        message="Welcome";
+        function Code_Day(){
+            let message="Hello Coders";
+            {
+                let message="Today is Friday"  //in this block scope run this functional element
+                console.log("Good Morning Coders!"+ message);
+            }
+            console.log(message) //Then Run 'Today is Friday'
+            let Code_Day2=function Explore(){
+                console.log("This is Code_Day2 "+message)
+            }
+            return Code_Day2
+        }
+        Code_Day2=Code_Day();
+        Code_Day2()  //Print 'This is Code_Day2'.
+
+        //Example-2: Nested Closure-
+        function return_fun(){
+        const x=()=>{
+            let a=1
+            console.log(a) //this a printed
+            const y=()=>{
+                let a=2
+                console.log(a) //this a printed 
+                const z=()=>{
+                    let a=3
+                    console.log(a) //this a printed
+                }
+                z()
+            }
+            y()
+        }
+        return x
+    }
+    let a=return_fun()
+    a() //in this closure there are all a values are printed properly O/P=> 1,2,3.
+
+    </script>
+</body>
+
+</html>
